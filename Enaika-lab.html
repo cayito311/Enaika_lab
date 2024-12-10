@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enaika-lab</title>
+    <link rel="stylesheet" href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Ariaal', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(145deg, #1e2a38, #2d3b54);
+            color: #fff;
+            animation: fadeIn 1s ;
+            overflow-x: hidden;
+        }
+
+.banner {
+    background: linear-gradient(135deg, #28a745, #36d657); /* Verde degradado */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 80px 20px;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideInFromTop 1s ease-out ;
+}
+  
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            color: white; /* Cambiado a blanco */
+            margin-bottom: 30px;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .dropdown {
+            position: relative;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        button {
+            background: linear-gradient(135deg, #28a745, #36d657); /* Verde */
+            color: white;
+            padding: 20px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e2a38;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 15px 25px;
+            color: #fff;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-content a:hover {
+            background: #36d657; /* Verde oscuro */
+            color: #1e2a38;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: slideDown 0.4s ease;
+        }
+
+        .info-content {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 20px;
+            color: #b5b5b5;
+            opacity: 0;
+            animation: fadeInContent 1s forwards;
+        }
+
+        .info-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #00eaff;
+        }
+
+        .footer {
+            background: #3e2723; /* Café oscuro */
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ff4b5c;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInContent {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">Enaika-lab</div>
+
+    <div class="container">
+        <h2>Bienvenidos a Enaika-lab</h2>
+        <div class="button-container">
+            <div class="dropdown">
+                <button>Productores locales</button>
+                <div class="dropdown-content">
+                    <a href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html#" onclick="mostrarInformacion(&#39;info1&#39;)">Patios productivos</a>
+                    <a href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html#" onclick="mostrarInformacion(&#39;info2&#39;)">Empaques</a>
+                    <a href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html#" onclick="mostrarInformacion(&#39;info3&#39;)">Otros</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Emprendedores</button>
+                <div class="dropdown-content">
+                    <a href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html#" onclick="mostrarInformacion(&#39;info4&#39;)">Diseños y rediseños</a>
+                    <a href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html#" onclick="mostrarInformacion(&#39;info5&#39;)">Fábrica de formalización</a>
+                    <a href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html#" onclick="mostrarInformacion(&#39;info6&#39;)">Promociones</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Turistas</button>
+                <div class="dropdown-content">
+                    <a href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html#" onclick="mostrarInformacion(&#39;info7&#39;)">Productos ancestrales</a>
+                    <a href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html#" onclick="mostrarInformacion(&#39;info8&#39;)">Talleres ancestrales</a>
+                    <a href="file:///C:/Users/camargo/OneDrive/Escritorio/Enaika_lab/index.html#" onclick="mostrarInformacion(&#39;info9&#39;)">Otros</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-content" id="informacion">
+            <!-- La información aparecerá aquí -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><a href="mailto:enaika20@gmail.com">enaika20@gmail.com</a></p>
+        <p><a href="https://wa.me/3005269777" target="_blank">Teléfono</a></p>
+        <p>
+            <a href="https://www.facebook.com/EnaikaFitofarmacia/" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/enaika_ctg/" target="_blank">Instagram</a>
+        </p>
+        <p>© 2024 Enaika-lab. Todos los derechos reservados.</p>
+    </div>
+
+    <script>
+        function mostrarInformacion(info) {
+            const contenidos = {
+                'info1': '<h3>Patios productivos</h3><p>Información detallada sobre los patios productivos.</p>',
+                'info2': '<h3>Empaques</h3><p>Información detallada sobre los empaques.</p>',
+                'info3': '<h3>Otros</h3><p>Información adicional sobre otros temas relacionados.</p>',
+                'info4': '<h3>Diseños y rediseños</h3><p>Detalles sobre diseños innovadores.</p>',
+                'info5': '<h3>Fábrica de formalización</h3><p>Servicios de formalización.</p>',
+                'info6': '<h3>Promociones</h3><p>Promociones exclusivas para emprendedores.</p>',
+                'info7': '<h3>Productos ancestrales</h3><p>Explora productos únicos y tradicionales.</p>',
+                'info8': '<h3>Talleres ancestrales</h3><p>Participa en experiencias culturales auténticas.</p>',
+                'info9': '<h3>Otros</h3><p>Información diversa para turistas.</p>'
+            };
+            document.getElementById('informacion').innerHTML = contenidos[info] || '<p>Selecciona una opción válida.</p>';
+        }
+    </script>
+
+</body></html>
